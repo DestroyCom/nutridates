@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 15vh;
+}
+
+header>a:nth-child(1){
+    color: black;
+    font-size: 3em;
+    font-weight: 700;
+    height: 3vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    transition: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+
+}
+
+header>a:nth-child(2){
+    background-color: #205788;
+    color: white;
+    border-radius: 50px;
+    height: 3vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    transition: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+
+}
+
+header>a:nth-child(2):hover{
+    background-color: #2f7cc0;
+}
