@@ -2,11 +2,13 @@
 
 Nutridates est un agenda en ligne sous React pour noter les aliments que vous comptez utiliser lors de vos repas.
 
-Site offciel.
+Site officiel.
 
 ## Utiliser le votre
 Vous aurez besoin d'un projet FIREBASE, recuperez votre configuration firebase et copier le dans le fichier "credentials-firebase.js.dist" et renommer le "credentials-firebase.js".
+
 Pour l'hebergement, référez vous a la documentation de votre hébergeur.
+
 [Voir plus (en anglais)](#lancer-le-projet)
 
 ## A quoi sert Nutridate et pourquoi ce projet ?
@@ -30,7 +32,6 @@ In the project directory, you can run:
 #### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
