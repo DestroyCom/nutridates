@@ -4,6 +4,7 @@ import moment from 'moment';
 import firebase from "firebase/app";
 import 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import '../styles/Calendar.css'
 
 function CalendarDisplay(){
 
@@ -58,7 +59,7 @@ function CalendarDisplay(){
         
     }
 
-    return (<div>
+    return (<div id='calendar'>
                 <Calendar localizer={localizer}
                           events={events}
                           onSelectEvent={event => window.location = '/calendar/event/' + event.id}
