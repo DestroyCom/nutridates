@@ -19,6 +19,7 @@ import Header from './Header.js';
 import Welcome from './Welcome.js';
 import '../styles/App.css';
 import EventDisplay from './EventDisplay';
+import Account from './Account';
 
 function App() {
   return (
@@ -31,10 +32,10 @@ function App() {
               {
                   <>
                     <IfFirebaseAuthed >
-                    <button onClick={()=>firebase.auth().signOut()}>Se deconnecter</button>
+                      <Account />
                     </IfFirebaseAuthed>
                     <IfFirebaseUnAuthed>
-                      <Login />
+                      <Login/>
                     </IfFirebaseUnAuthed>
                   </>
               }
@@ -48,7 +49,7 @@ function App() {
                       <EventDisplay/>
                     </IfFirebaseAuthed>
                     <IfFirebaseUnAuthed>
-                      <p>tu n'es pas identifier</p>
+                    <Welcome />
                     </IfFirebaseUnAuthed>
                   </>
               }
@@ -62,7 +63,7 @@ function App() {
                       <CalendarDisplay />
                     </IfFirebaseAuthed>
                     <IfFirebaseUnAuthed>
-                      <p>tu n'es pas identifier</p>
+                    <Welcome />
                     </IfFirebaseUnAuthed>
                   </>
               }
@@ -71,6 +72,10 @@ function App() {
           <Route exact path='/'>
             <Welcome />
           </Route>
+          <Route exact path='/404'>
+            <p>PERDU</p>
+          </Route>
+          <Redirect to='/404'/>
         </Switch>
       </Router>
     </>

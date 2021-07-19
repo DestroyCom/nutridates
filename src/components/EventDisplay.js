@@ -1,4 +1,5 @@
 import {
+    Redirect,
     useParams
 } from "react-router-dom";
 import firebase from "firebase/app";
@@ -30,15 +31,18 @@ function EventDisplay(){
         getEvent.get().then((doc) => {
             if (doc.exists) {
                 let response = doc.data();
-                console.log(response[eventId])
+                console.log(Object.keys(response).length, eventId)
+                if(eventId-1 >  Object.keys(response).length){
+                    throw new Error('Event inexistant');
+                }
                 if (response[eventId] === undefined) {
-                    firebase.firestore().collection(String(useruid)).doc('event').update({
-                            'Viandes': '',
-                            'Féculents': '',
-                            'Verts': '',
-                            'Laitage': '',
-                            'Fruit': ''
-                        }
+                    firebase.firestore().collection(String(useruid)).doc('event').update({[eventId]: {
+                        'Viandes': '',
+                        'Féculents': '',
+                        'Verts': '',
+                        'Laitage': '',
+                        'Fruit': ''
+                    }}
                     );
                     reponseUpdate({
                         'Viandes': '',
@@ -63,6 +67,7 @@ function EventDisplay(){
             }
         }).catch((error) => {
             console.log("Error getting document:", error);
+            window.location = '/calendar'
         });
     }, [])
 

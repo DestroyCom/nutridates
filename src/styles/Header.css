@@ -23,7 +23,7 @@ header>a:nth-child(1){
 }
 
 header>a:nth-child(2){
-    background-color: #205788;
+    background-color: #2f7cc0;
     color: white;
     border-radius: 50px;
     height: 3vh;
@@ -38,5 +38,5 @@ header>a:nth-child(2){
 }
 
 header>a:nth-child(2):hover{
-    background-color: #2f7cc0;
+    background-color: #205788;
 }
