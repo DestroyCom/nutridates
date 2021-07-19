@@ -2,6 +2,9 @@
   "name": "nutridates",
   "version": "0.1.0",
   "private": true,
+  "engines":{
+    "node":"16.x"
+  },
   "dependencies": {
     "@react-firebase/auth": "^0.2.10",
     "@testing-library/jest-dom": "^5.14.1",
