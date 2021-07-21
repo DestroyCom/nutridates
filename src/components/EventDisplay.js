@@ -23,8 +23,8 @@ function EventDisplay(){
     })
     const [addField, addFieldUpdate] = useState('')
     const [typeChange, typeChangeUpdate] = useState('null')
-
-    useEffect((eventId) => {
+    
+    useEffect(() => {
         let useruid = firebase.auth().currentUser.uid;
 
         let getEvent = firebase.firestore().collection(String(useruid)).doc('event');
@@ -69,6 +69,7 @@ function EventDisplay(){
             console.log("Error getting document:", error);
             window.location = '/calendar'
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     function sendField(){
