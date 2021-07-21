@@ -23,7 +23,7 @@
 }
 
 
-#account>div>p{
+#account>div>p, #account>div>a{
     width: 15vw;
     height: 5vh;
     background-color: #205788;
