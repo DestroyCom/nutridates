@@ -10,7 +10,7 @@
     width: 50vw;
 }
 
-#eventDetails>.addField>a{
+#eventDetails>.addField>p{
     width: 15vw;
     height: 5vh;
     background-color: #205788;
@@ -25,7 +25,7 @@
 }
 
 
-#eventDetails>.addField>a:hover{
+#eventDetails>.addField>p:hover{
     background-color: #3689d3;
     border-color: #3689d3 ;
     color: white;

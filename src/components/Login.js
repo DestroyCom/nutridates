@@ -24,6 +24,7 @@ function Login() {
 
     function checkMailFormat(e){
         let value = e.target.value;
+        /* eslint "no-control-regex": 0 */
         let mailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
         if(mailRegex.test(value)){
             document.querySelector('#mail').classList.remove('false');
@@ -100,8 +101,8 @@ function Login() {
                 <input type='text' onChange={(e)=>emailUpdate(e.target.value)} placeholder='Mail' ></input>
                 <input type='text' onChange={(e)=>psswrdUpdate(e.target.value)} placeholder='Password'></input>
                 <div className='line'>
-                    <a onClick={()=>displayPannel()} id='methodButton' >S'inscrire</a>
-                    <a onClick={()=>callLog('connexion')}>Se connecter</a>
+                    <p onClick={()=>displayPannel()} id='methodButton' >S'inscrire</p>
+                    <p onClick={()=>callLog('connexion')}>Se connecter</p>
                 </div>
             </div>
             <div className='hidden' id='signIn'>
@@ -110,8 +111,8 @@ function Login() {
                     <input type='text' onChange={(e)=>checkMailFormat(e)} placeholder='Mail' id='mail' ></input>
                     <input type='text' onChange={(e)=>checkPasswordFormat(e)} placeholder='Password' id='password'></input>
                     <div className='line'>
-                        <a onClick={()=>displayPannel()} id='methodButton' >Se connecter</a>
-                        <a onClick={()=>callLog('inscription')} id='logButton' className='hidden'>S'inscrire</a>
+                        <p onClick={()=>displayPannel()} id='methodButton' >Se connecter</p>
+                        <p onClick={()=>callLog('inscription')} id='logButton' className='hidden'>S'inscrire</p>
                     </div>
             </div>
         </div>

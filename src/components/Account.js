@@ -41,7 +41,7 @@ function Account() {
             <h3>{reponse.name.toUpperCase()}</h3>
             <div>
                 <Link to='/calendar'>Mon agenda</Link>
-                <a onClick={()=>{firebase.auth().signOut()}}>Me deconnecter</a>
+                <p onClick={()=>{firebase.auth().signOut()}}>Me deconnecter</p>
             </div>
         </div>
     );

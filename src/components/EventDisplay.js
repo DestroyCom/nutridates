@@ -1,5 +1,4 @@
 import {
-    Redirect,
     useParams
 } from "react-router-dom";
 import firebase from "firebase/app";
@@ -25,7 +24,7 @@ function EventDisplay(){
     const [addField, addFieldUpdate] = useState('')
     const [typeChange, typeChangeUpdate] = useState('null')
 
-    useEffect(() => {
+    useEffect((eventId) => {
         let useruid = firebase.auth().currentUser.uid;
 
         let getEvent = firebase.firestore().collection(String(useruid)).doc('event');
@@ -107,7 +106,7 @@ function EventDisplay(){
                     <option value='Fruit'>Fruits</option>
                 </select>
                 <input type='text' onChange={(e) => addFieldUpdate(e.target.value)} placeholder='Votre aliment' ></input>
-                {typeChange !== 'null' && addField !== '' ? <a onClick={()=>sendField()}>Ajouter</a>:  null}
+                {typeChange !== 'null' && addField !== '' ? <p onClick={()=>sendField()}>Ajouter</p>:  null}
                 </div>
           </div>
       )

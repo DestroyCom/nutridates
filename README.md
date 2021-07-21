@@ -24,7 +24,7 @@ J'ai donc decider de le coder moi meme.
 - moment - https://momentjs.com/
 - Firebase - https://firebase.google.com/
 - normalize.css - https://necolas.github.io/normalize.css/
-In the project directory, you can run:
+
 
 
 

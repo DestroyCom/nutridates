@@ -41,7 +41,7 @@ input:focus{
     border-bottom: green solid 3px !important;
 }
 
-#signIn>.line>a:nth-child(1), #login>.line>a:nth-child(1){
+#signIn>.line>p:nth-child(1), #login>.line>p:nth-child(1){
     width: 20vw;
     height: 5vh;
     border: #205788 solid 2px ;
@@ -52,7 +52,7 @@ input:focus{
     padding-top: 1%;
 }
 
-#signIn>.line>a:nth-child(2), #login>.line>a:nth-child(2){
+#signIn>.line>p:nth-child(2), #login>.line>p:nth-child(2){
     width: 20vw;
     height: 5vh;
     background-color: #205788;
@@ -63,23 +63,23 @@ input:focus{
     padding-top: 1%;
 }
 
-#signIn>.line>a, #login>.line>a{
+#signIn>.line>p, #login>.line>p{
     transition: background-color, color, border;
     transition-duration: 0.5s;
     transition-delay: 0.05s;
 }
 
-#signIn>.line>a:hover, #login>.line>a:hover{
+#signIn>.line>p:hover, #login>.line>p:hover{
     cursor: pointer;
 }
 
-#signIn>.line>a:nth-child(1):hover, #login>.line>a:nth-child(1):hover{
+#signIn>.line>p:nth-child(1):hover, #login>.line>p:nth-child(1):hover{
     background-color: #3689d3;
     border-color: #3689d3 ;
     color: white;
 }
 
-#signIn>.line>a:nth-child(2):hover, #login>.line>a:nth-child(2):hover{
+#signIn>.line>p:nth-child(2):hover, #login>.line>p:nth-child(2):hover{
     background-color: #3689d3;
     color: white;
 }
